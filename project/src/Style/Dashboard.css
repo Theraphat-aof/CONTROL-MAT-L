@@ -1,0 +1,220 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container-dash {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background-color: #202124;
+}
+
+.bi-plus-circle-fill {
+  font-size: 3em;
+  color: #ddd;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.5s ease;
+  display: inline-block;
+}
+
+.bi-plus-circle-fill:hover {
+  transform: scale(1.2);
+}
+
+h1 {
+  text-align: center;
+  color: #ddd;
+}
+
+h2 {
+  text-align: center;
+  color: #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  color: #ddd;
+}
+
+tr:hover {
+  background-color: #333;
+}
+
+th {
+  background-color: #333;
+  color: #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.modal-add {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-add-content {
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-add-content form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.modal-add-content form label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.modal-add-content form label span {
+  width: 7vw;
+  text-align: center;
+  color: #ddd;
+}
+
+.modal-add-content input {
+  width: 100%;
+  padding: 8px;
+  align-items: center;
+  color: #ddd;
+  background-color: #555;
+  border: 1px solid #555;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.modal-add-content input[type="text"]:focus {
+  box-shadow: 0 0 6px #ddd;
+}
+
+.modal-action {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-add-content button[type="submit"] {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-add-content button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.modal-add-content button[type="button"] {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-add-content button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+
+input[type="text"]::placeholder {
+  color: #797979;
+  opacity: 1;
+}
+
+.modal-delete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-delete-content {
+  background: #333;
+  color: #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+}
+
+.modal-delete-content button[type="submit"] {
+  padding: 10px;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-delete-content button[type="submit"]:hover {
+  background-color: #6b6b6b;
+}
+
+.modal-delete-content button[type="button"] {
+  padding: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.modal-delete-content button[type="button"]:hover {
+  background-color: #d32f2f;
+}
+
+.bi-search {
+  position: fixed;
+  color: #333;
+  z-index: 100;
+  right: 16.4em;
+  top: 4em;
+  font-size: 180%;
+}
+

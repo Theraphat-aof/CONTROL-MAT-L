@@ -1,0 +1,81 @@
+/* Navbar.css */
+.navbar-container {
+  width: 100%;
+  background-color: #202124;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+  position: relative;
+  animation: slideIn 1s ease-out;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  animation: fadeIn 2s ease-in;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  margin-left: 6em;
+  font-size: 51px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  animation: fadeInScale 2s ease-in-out;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Fade-in with scaling */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column; 
+  }
+
+  .header {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+}

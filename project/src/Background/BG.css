@@ -1,0 +1,50 @@
+/* VideoBackground.css */
+
+.video-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -10;
+  }
+  
+  .video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* ทำให้วิดีโออยู่ข้างหลังเนื้อหา */
+  }
+  
+  .video-background .content {
+    position: relative;
+    z-index: 1; /* ให้เนื้อหาอยู่ด้านหน้าวิดีโอ */
+    color: white;
+    text-align: center;
+  }
+
+  .image-background {
+    position: absolute;
+    width: 100%;
+    height: 85vh; /* Full viewport height */
+    background-size: 150%; /* Cover the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Text color for the content */
+    z-index: -10; /* Ensure content appears above the background */
+  }
+  

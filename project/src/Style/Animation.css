@@ -1,0 +1,65 @@
+.loading-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #f3f3f3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.loading-bar {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: limegreen;
+  animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.typing {
+  margin-left: 0.5rem;
+  margin-bottom: 1rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  color: #fff;
+  font-size: 20px;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  width: 10ch;
+  animation: typing 1s steps(10, end), blink-caret 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 10ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #fff;
+  }
+}
